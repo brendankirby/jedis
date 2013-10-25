@@ -3,6 +3,8 @@ package redis.clients.jedis;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import redis.clients.jedis.exceptions.JedisDataException;
+
 public class Queable {
     private Queue<Response<?>> pipelinedResponses = new LinkedList<Response<?>>();
 
@@ -11,6 +13,10 @@ public class Queable {
     }
 
     protected Response<?> generateResponse(Object data) {
+        if (data instanceof JedisDataException){
+            throw new JedisDataException((JedisDataException)data);
+        }
+
         Response<?> response = pipelinedResponses.poll();
         if (response != null) {
             response.set(data);
