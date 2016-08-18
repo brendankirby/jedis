@@ -1,10 +1,10 @@
 # Jedis
 
-Jedis is a blazingly small and sane [Redis](http://github.com/antirez/redis "Redis") java client.
+Jedis is a blazingly small and sane [Redis](http://github.com/antirez/redis "Redis") Java client.
 
 Jedis was conceived to be EASY to use.
 
-Jedis is fully compatible with redis 2.6.14.
+Jedis is fully compatible with Redis 2.6.14.
 
 ## Community
 
@@ -39,7 +39,7 @@ All of the following redis features are supported:
 You can download the latest build at: 
     http://github.com/xetorthio/jedis/downloads
 
-Or use it as a maven dependency:
+Or use it as a Maven dependency:
 
 ```xml
 <dependency>
@@ -67,13 +67,13 @@ And you are done!
 
 ## I want to contribute!
 
-That is great! Just fork the project in github. Create a topic branch, write some code, and add some tests for your new code.
+That is great! Just fork the project in GITHUB. Create a topic branch, write some code, and add some tests for your new code.
 
 To run the tests:
 
-- Use the latest redis master branch.
+- Use the latest Redis master branch.
 
-- Run ```make test```. This will run 2 instances of redis. We use 2 redis
+- Run ```make test```. This will run 2 instances of redis. We use 2 Redis
 	servers, one on default port (6379) and the other one on (6380). Both have
 	authentication enabled with default password (foobared). This way we can
 	test both sharding and auth command. For the Sentinel tests to we use a
